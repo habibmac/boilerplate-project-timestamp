@@ -6,10 +6,14 @@
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/api/:date",
-      "destination": "index.js"
+      "src": "/api",
+      "dest": "index.js"
+    }, 
+    {
+      "src": "/api/(.*)",
+      "dest": "index.js"
     }
   ]
 }
